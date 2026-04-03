@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morgans Hotel — Digital Portfolio</title>
+  <meta name="description" content="A collection of digital assets freely created for Morgans Hotel, Swansea — websites, a web application, and marketing design." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- ─── NAV ─────────────────────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo">
+        <img src="images/logo/morgans-logo.png" alt="Morgans" class="nav__logo-img" />
+        <span class="nav__logo-fallback">morgans</span>
+      </a>
+      <ul class="nav__links">
+        <li><a href="#web-presence">Web</a></li>
+        <li><a href="#event-manager">App</a></li>
+        <li><a href="#marketing">Creative</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav__cta">Get in Touch</a></li>
+      </ul>
+      <button class="nav__burger" id="navBurger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="navMobile">
+      <ul>
+        <li><a href="#web-presence">Web</a></li>
+        <li><a href="#event-manager">App</a></li>
+        <li><a href="#marketing">Creative</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ─── HERO ──────────────────────────────────────────────────────────── -->
+  <section class="hero" id="top">
+    <div class="hero__content reveal">
+      <p class="hero__eyebrow">A Digital Portfolio</p>
+      <h1 class="hero__title">Built for Morgans,<br /><em>from the ground up.</em></h1>
+      <p class="hero__sub">A collection of websites, a web application, and marketing assets — independently created to show what modern digital work looks like for a brand of Morgans' calibre.</p>
+      <a href="#web-presence" class="btn btn--outline">View the Work</a>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ─── 01 WEB PRESENCE ──────────────────────────────────────────────── -->
+    <section class="section section--light" id="web-presence">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">01 — Web Presence</span>
+          <h2 class="section-title">Landing Pages</h2>
+          <p class="section-desc">Purpose-built pages designed to convert and inform — each tailored to a specific audience within the Morgans and Swansea.com family.</p>
+        </div>
+
+        <div class="cards-two reveal">
+
+          <!-- Wedding -->
+          <article class="case-card">
+            <a href="https://eventpagedemo.vercel.app/" target="_blank" rel="noopener" class="case-card__media">
+              <img src="images/screenshots/wedding-page/wedding-desktop.png" alt="Wedding Landing Page" loading="lazy" />
+              <div class="case-card__media-overlay">View Live Site →</div>
+              <span class="case-card__tag">Landing Page</span>
+            </a>
+            <div class="case-card__body">
+              <h3 class="case-card__title">Wedding Events Page</h3>
+              <p class="case-card__desc">A dedicated page for couples considering Morgans as their wedding venue. Built to showcase the space, communicate the experience, and drive enquiries — without the friction of navigating the main site.</p>
+              <ul class="case-card__features">
+                <li>Full-bleed photography layout</li>
+                <li>Venue details &amp; capacity information</li>
+                <li>Clear enquiry call-to-action</li>
+                <li>Mobile-first responsive design</li>
+              </ul>
+              <a href="https://eventpagedemo.vercel.app/" target="_blank" rel="noopener" class="btn btn--dark">View Live →</a>
+            </div>
+          </article>
+
+          <!-- Haystack -->
+          <article class="case-card">
+            <a href="https://haystack-five.vercel.app/" target="_blank" rel="noopener" class="case-card__media">
+              <img src="images/screenshots/haystack/haystack-desktop.png" alt="Haystack Landing Page" loading="lazy" />
+              <div class="case-card__media-overlay">View Live Site →</div>
+              <span class="case-card__tag">Landing Page</span>
+            </a>
+            <div class="case-card__body">
+              <h3 class="case-card__title">Haystack Landing Page</h3>
+              <p class="case-card__desc">Haystack sits under the wider Swansea.com umbrella. Currently without a web presence beyond an ordering page, this was built on my own initiative — a proof of concept for what a full digital home for the brand could look like.</p>
+              <ul class="case-card__features">
+                <li>Brand identity introduction</li>
+                <li>Concept-driven editorial layout</li>
+                <li>Designed to complement the Swansea.com family</li>
+                <li>Self-initiated — not commissioned</li>
+              </ul>
+              <a href="https://haystack-five.vercel.app/" target="_blank" rel="noopener" class="btn btn--dark">View Live →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── 02 EVENT MANAGER APP ──────────────────────────────────────────── -->
+    <section class="section section--dark" id="event-manager">
+      <div class="container">
+
+        <div class="section-header section-header--light reveal">
+          <span class="section-label">02 — Web Application</span>
+          <h2 class="section-title">Event Manager App</h2>
+          <p class="section-desc">A full-stack coordination tool built to replace fragmented WhatsApp communication with structured, real-time team management.</p>
+        </div>
+
+        <div class="problem-solution reveal">
+          <div class="ps-block">
+            <span class="ps-block__label ps-block__label--problem">The Problem</span>
+            <p>Morgans hosts complex events — weddings, corporate dinners, private parties — each with unique layouts, staffing, and detailed timelines. All of this coordination happened over WhatsApp: fragmented, impossible to reference mid-shift, and invisible to staff on the floor.</p>
+          </div>
+          <div class="ps-divider"></div>
+          <div class="ps-block">
+            <span class="ps-block__label ps-block__label--solution">The Solution</span>
+            <p>A purpose-built web app that gives event managers a structured workspace to organise events from the top down, and gives front-of-house staff a clean mobile interface to stay coordinated — without needing to scroll through chat threads to find their briefing.</p>
+          </div>
+        </div>
+
+        <!-- Admin view -->
+        <div class="app-view reveal">
+          <div class="app-view__header">
+            <div class="app-view__badge app-view__badge--admin">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="1" y="1" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M4 12h6M7 10v2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              Admin · Desktop
+            </div>
+            <h3 class="app-view__title">Event Manager Dashboard</h3>
+            <p class="app-view__desc">The admin panel is designed for event managers working at a desk. They can create events, upload the PDF briefings they already use, build out a digital timeline, and assign staff to specific roles and rooms — all in one place.</p>
+          </div>
+          <div class="app-view__screen app-view__screen--desktop">
+            <div class="screen-frame screen-frame--desktop">
+              <div class="screen-frame__bar">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="screen-frame__body">
+                <img src="images/screenshots/event-manager/admin/admin-dashboard.png" alt="Admin dashboard view" loading="lazy" />
+              </div>
+            </div>
+          </div>
+          <ul class="feature-list">
+            <li><span class="feature-list__icon">✦</span> Create and manage multiple concurrent events</li>
+            <li><span class="feature-list__icon">✦</span> Upload existing PDF briefings — brief is digitised into the app</li>
+            <li><span class="feature-list__icon">✦</span> Build timelines with setup tasks, timings, and checkpoints</li>
+            <li><span class="feature-list__icon">✦</span> Assign individual staff to rooms and roles</li>
+            <li><span class="feature-list__icon">✦</span> Full event overview at a glance, no searching required</li>
+          </ul>
+        </div>
+
+        <div class="app-view-divider"></div>
+
+        <!-- FOH view -->
+        <div class="app-view reveal">
+          <div class="app-view__header">
+            <div class="app-view__badge app-view__badge--foh">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><rect x="4" y="1" width="6" height="12" rx="1.5" stroke="currentColor" stroke-width="1.3"/><circle cx="7" cy="10.5" r="0.75" fill="currentColor"/></svg>
+              Front of House · Mobile
+            </div>
+            <h3 class="app-view__title">Staff View</h3>
+            <p class="app-view__desc">Staff access the app on their phones or company iPads. They see exactly what's relevant to their role: their timeline, their tasks, and where they're assigned. Tasks are ticked off in real time as setup progresses through the shift.</p>
+          </div>
+          <div class="app-view__screen app-view__screen--mobile">
+            <div class="mobile-frames">
+              <div class="screen-frame screen-frame--mobile">
+                <div class="screen-frame__notch"></div>
+                <div class="screen-frame__body">
+                  <img src="images/screenshots/event-manager/foh/foh-timeline.png" alt="FOH timeline view" loading="lazy" />
+                </div>
+              </div>
+              <div class="screen-frame screen-frame--mobile screen-frame--offset">
+                <div class="screen-frame__notch"></div>
+                <div class="screen-frame__body">
+                  <img src="images/screenshots/event-manager/foh/foh-tasks.png" alt="FOH task view" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <ul class="feature-list">
+            <li><span class="feature-list__icon">✦</span> Personal timeline view — only what's relevant to that staff member</li>
+            <li><span class="feature-list__icon">✦</span> Tap to tick off setup tasks as the event takes shape</li>
+            <li><span class="feature-list__icon">✦</span> Room and role assignment visible at a glance</li>
+            <li><span class="feature-list__icon">✦</span> Works on any phone or iPad — no app download required</li>
+            <li><span class="feature-list__icon">✦</span> Updates in real time as admin makes changes</li>
+          </ul>
+        </div>
+
+        <div class="demo-cta reveal">
+          <p class="demo-cta__label">This is a working demonstration build. All features are fully functional.</p>
+          <a href="https://morgans-event-manager-3.vercel.app/" target="_blank" rel="noopener" class="btn btn--outline">Explore the Demo →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ─── 03 MARKETING & CREATIVE ──────────────────────────────────────── -->
+    <section class="section section--light" id="marketing">
+      <div class="container">
+
+        <div class="section-header reveal">
+          <span class="section-label">03 — Marketing &amp; Creative</span>
+          <h2 class="section-title">Design Assets</h2>
+          <p class="section-desc">Print, digital, and AI-assisted visuals — each piece designed with Morgans' aesthetic in mind and ready to put to use.</p>
+        </div>
+
+        <!-- Before/After Cocktail -->
+        <div class="marketing-feature reveal">
+          <div class="marketing-feature__text">
+            <span class="section-label">AI Photo Enhancement</span>
+            <h3 class="marketing-feature__title">Cocktail Photography</h3>
+            <p>Starting from a standard smartphone photograph, AI-assisted editing was used to produce a rich, atmospheric cocktail image consistent with premium hospitality branding. Drag the slider to compare.</p>
+          </div>
+          <div class="before-after" id="beforeAfter">
+            <div class="ba__after">
+              <img src="images/marketing/cocktail/cocktail-after.jpg" alt="After — Enhanced cocktail" draggable="false" />
+            </div>
+            <div class="ba__before" id="baBefore">
+              <img src="images/marketing/cocktail/cocktail-before.jpg" alt="Before — Original photo" draggable="false" />
+            </div>
+            <div class="ba__handle" id="baHandle">
+              <div class="ba__line"></div>
+              <button class="ba__btn" aria-label="Drag to compare">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M7 5L2 11L7 17M15 5L20 11L15 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
+            <span class="ba__label ba__label--before">Before</span>
+            <span class="ba__label ba__label--after">After</span>
+          </div>
+        </div>
+
+        <!-- Marketing grid -->
+        <div class="marketing-grid reveal">
+
+          <!-- Review Poster -->
+          <div class="m-card m-card--portrait">
+            <div class="m-card__img">
+              <img src="images/marketing/review-poster/review-poster.jpg" alt="Review Us Poster" loading="lazy" />
+            </div>
+            <div class="m-card__body">
+              <span class="m-card__tag">Print &amp; Digital</span>
+              <h4 class="m-card__title">Review Us Poster</h4>
+              <p class="m-card__desc">In-venue signage encouraging guests to leave a Google review. Designed to feel at home in the Morgans environment — elegant enough to complement the interior rather than interrupt it.</p>
+            </div>
+          </div>
+
+          <!-- Easter -->
+          <div class="m-card">
+            <div class="m-card__img">
+              <img src="images/marketing/easter/easter-egg-hunt.jpg" alt="Easter Egg Hunt" loading="lazy" />
+            </div>
+            <div class="m-card__body">
+              <span class="m-card__tag">Event Marketing</span>
+              <h4 class="m-card__title">Easter Egg Hunt</h4>
+              <p class="m-card__desc">Promotional image for the Morgans kids Easter egg hunt event. Playful in tone, consistent with the brand's visual identity.</p>
+            </div>
+          </div>
+
+          <!-- Postcards -->
+          <div class="m-card m-card--wide">
+            <div class="m-card__img m-card__img--duo">
+              <img src="images/marketing/postcards/postcard-1.jpg" alt="Morgans Postcard 1" loading="lazy" />
+              <img src="images/marketing/postcards/postcard-2.jpg" alt="Morgans Postcard 2" loading="lazy" />
+            </div>
+            <div class="m-card__body">
+              <span class="m-card__tag">Print</span>
+              <h4 class="m-card__title">Morgans Postcards</h4>
+              <p class="m-card__desc">A pair of printed postcards designed as in-room collateral or keepsakes — capturing Morgans' character in a format guests take home with them.</p>
+            </div>
+          </div>
+
+          <!-- Merchandise -->
+          <div class="m-card m-card--merch">
+            <div class="m-card__img m-card__img--grid" id="merchGrid">
+              <!-- populated by JS from images/marketing/merchandise/ -->
+              <img src="images/marketing/merchandise/merch-tote.jpg" alt="Morgans Tote" loading="lazy" />
+              <img src="images/marketing/merchandise/merch-hat.jpg" alt="Morgans Hat" loading="lazy" />
+              <img src="images/marketing/merchandise/merch-mug.jpg" alt="Morgans Mug" loading="lazy" />
+            </div>
+            <div class="m-card__body">
+              <span class="m-card__tag">Merchandise</span>
+              <h4 class="m-card__title">Branded Merchandise</h4>
+              <p class="m-card__desc">Mockup concepts for Morgans branded merchandise — totes, caps, mugs and more. Designed to extend the brand beyond the venue and into guests' everyday lives.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── ABOUT ──────────────────────────────────────────────────────────── -->
+    <section class="section section--dark" id="about">
+      <div class="container">
+        <div class="about reveal">
+          <div class="about__photo">
+            <img src="images/about/profile.jpg" alt="Adam Hurley" />
+            <!-- If no photo provided, placeholder div shows -->
+          </div>
+          <div class="about__content">
+            <span class="section-label">The Person Behind It</span>
+            <h2 class="about__name">Adam Hurley</h2>
+            <p class="about__bio">I'm an all-around digital creative — equally at home designing a brand identity, building a web application, or producing a polished marketing asset. What sets me apart is the ability to move fluidly between creative vision and technical execution: I don't just design things that look good, I build them.</p>
+            <p class="about__bio">Everything in this portfolio was created independently for Morgans — not as client work, but as a genuine demonstration of what's possible. From a ground-up event management system to branded print collateral, each piece was driven by a single question: <em>what does Morgans need that doesn't exist yet?</em></p>
+            <div class="about__skills">
+              <span>Web Design</span>
+              <span>Web Development</span>
+              <span>UI / UX</span>
+              <span>Graphic Design</span>
+              <span>Web Applications</span>
+              <span>AI-Assisted Creative</span>
+              <span>Brand &amp; Print</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT ──────────────────────────────────────────────────────────── -->
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <div class="contact reveal">
+          <h2 class="contact__title">Let's talk.</h2>
+          <p class="contact__sub">If any of this resonates, I'd love to discuss what else could be built for Morgans.</p>
+          <div class="contact__links">
+            <a href="mailto:your@email.com" class="btn btn--dark">Send an Email</a>
+            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener" class="btn btn--ghost">LinkedIn →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__logo">morgans</span>
+        <p class="footer__note">All work created independently and freely as a demonstration of capability.<br />© 2025 Adam Hurley. Not affiliated with or representing Morgans Hotel.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
