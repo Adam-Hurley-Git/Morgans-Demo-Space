@@ -587,13 +587,13 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 }
 
 .iphone-mockup {
-  --border-radius-outer: 2.4rem;
+  --border-radius-outer: 1.9rem;
   --outer-padding: 0.45rem;
   --case-color: #0c0c0c;
   --border-radius-inner: calc(var(--border-radius-outer) - var(--outer-padding));
 
   position: relative;
-  width: 210px;
+  width: 240px;
   aspect-ratio: 1 / 2.165; /* iPhone 15 screen ratio */
   flex-shrink: 0;
   box-sizing: border-box;
