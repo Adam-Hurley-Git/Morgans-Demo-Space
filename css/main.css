@@ -548,6 +548,9 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 .app-view__screen {
   margin-bottom: 2rem;
 }
+.app-view__screen--mobile {
+  padding: 0 2rem;
+}
 .screen-frame--desktop {
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -575,41 +578,60 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   border-top: none;
 }
 
-/* Mobile frames */
+/* Mobile frames — iPhone mockup */
 .mobile-frames {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: flex-start;
   justify-content: center;
 }
-.screen-frame--mobile {
-  width: 240px;
+
+.iphone-mockup {
+  --border-radius-outer: 2.4rem;
+  --outer-padding: 0.45rem;
+  --case-color: #0c0c0c;
+  --border-radius-inner: calc(var(--border-radius-outer) - var(--outer-padding));
+
+  position: relative;
+  width: 210px;
+  aspect-ratio: 1 / 2.165; /* iPhone 15 screen ratio */
   flex-shrink: 0;
-  border-radius: 28px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: var(--c-dark-3);
-  padding: 12px;
+  box-sizing: border-box;
+  background-color: var(--case-color);
+  border-radius: var(--border-radius-outer);
+  padding: var(--outer-padding);
+
+  /* Metallic ring + layered depth shadows */
+  box-shadow:
+    0 0 0 1.5px rgba(255,255,255,0.78),  /* titanium ring */
+    0 0 0 4px rgba(10,10,10,0.9),         /* dark gap between ring and body */
+    0 28px 56px rgba(0,0,0,0.72),         /* main depth shadow */
+    0 8px 18px rgba(0,0,0,0.50);          /* near shadow */
 }
-.screen-frame--offset { margin-top: 3rem; }
-.screen-frame--mobile .screen-frame__notch {
-  width: 64px;
-  height: 14px;
-  background: var(--c-dark-2);
-  border-radius: 0 0 10px 10px;
-  margin: 0 auto 10px;
+
+.iphone-mockup--offset { margin-top: 3rem; }
+
+/* Dynamic Island pill */
+.iphone-mockup::before {
+  content: '';
+  position: absolute;
+  top: 0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28%;
+  height: 1.15rem;
+  background-color: var(--case-color);
+  border-radius: 1rem;
+  z-index: 2;
 }
-.screen-frame--mobile .screen-frame__body {
-  aspect-ratio: 9 / 16;
-  overflow: hidden;
-  border-radius: 18px;
-}
-.screen-frame--mobile .screen-frame__body img {
+
+.iphone-mockup__screen {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top;
-  border-radius: 0;
+  border-radius: var(--border-radius-inner);
 }
 
 /* Feature list */
@@ -970,7 +992,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 }
 
 @media (max-width: 420px) {
-  .screen-frame--mobile { width: 180px; }
+  .iphone-mockup { width: 150px; }
   .before-after { aspect-ratio: 1 / 1; }
 }
 
