@@ -795,7 +795,6 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 .m-card--portrait  { grid-column: span 4; }
 .m-card            { grid-column: span 4; }
 .m-card--landscape { grid-column: span 8; }
-.m-card--half      { grid-column: span 6; }
 .m-card--wide      { grid-column: span 12; }
 .m-card--merch     { grid-column: span 12; }
 
@@ -985,7 +984,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   .marketing-feature  { grid-template-columns: 1fr; }
   .problem-solution   { grid-template-columns: 1fr; }
   .ps-divider         { width: 100%; height: 1px; align-self: auto; }
-  .m-card--portrait, .m-card, .m-card--half, .m-card--wide, .m-card--merch { grid-column: span 12; }
+  .m-card--portrait, .m-card, .m-card--wide, .m-card--merch { grid-column: span 12; }
   .demo-cta           { flex-direction: column; text-align: center; }
   .mobile-frames      { justify-content: center; }
 }
