@@ -1,0 +1,71 @@
+<svg viewBox="0 0 280 574" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <defs>
+    <!-- Mask to punch out the screen area from the phone body -->
+    <mask id="screenHole">
+      <rect width="280" height="574" rx="40" fill="white"/>
+      <rect x="10" y="50" width="260" height="510" rx="12" fill="black"/>
+    </mask>
+
+    <!-- Frame body gradient — subtle titanium look -->
+    <linearGradient id="bodyGrad" x1="0" y1="0" x2="280" y2="574" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#404040"/>
+      <stop offset="30%"  stop-color="#1c1c1e"/>
+      <stop offset="70%"  stop-color="#1c1c1e"/>
+      <stop offset="100%" stop-color="#303030"/>
+    </linearGradient>
+
+    <!-- Left edge highlight — picks up light on the left rail -->
+    <linearGradient id="leftEdge" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="rgba(255,255,255,0.20)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+
+    <!-- Top-edge specular gleam -->
+    <linearGradient id="topEdge" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%"   stop-color="rgba(255,255,255,0.18)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── Phone body (frame only — screen is transparent) ── -->
+  <rect width="280" height="574" rx="40" fill="url(#bodyGrad)" mask="url(#screenHole)"/>
+
+  <!-- Outer edge: very subtle highlight ring -->
+  <rect x="0.5" y="0.5" width="279" height="573" rx="39.5"
+        stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+
+  <!-- Left-edge shimmer strip -->
+  <rect x="0" y="0" width="6" height="574" rx="40"
+        fill="url(#leftEdge)" mask="url(#screenHole)"/>
+
+  <!-- Top-edge shimmer strip -->
+  <rect x="0" y="0" width="280" height="6" rx="40"
+        fill="url(#topEdge)" mask="url(#screenHole)"/>
+
+  <!-- Screen bezel inner shadow line -->
+  <rect x="10.5" y="50.5" width="259" height="509" rx="11.5"
+        stroke="rgba(0,0,0,0.55)" stroke-width="1"/>
+
+  <!-- ── Dynamic Island ── -->
+  <rect x="98" y="16" width="84" height="28" rx="14" fill="#0a0a0a"/>
+  <!-- subtle inner gleam on top half of Dynamic Island -->
+  <rect x="99" y="16.5" width="82" height="12" rx="12"
+        fill="rgba(255,255,255,0.05)"/>
+
+  <!-- ── Left side buttons ── -->
+  <!-- Silent / mute switch -->
+  <rect x="-3" y="108" width="5" height="30" rx="2.5" fill="#2c2c2e"/>
+  <rect x="-3" y="108" width="2" height="30" rx="1"   fill="rgba(255,255,255,0.08)"/>
+
+  <!-- Volume Up -->
+  <rect x="-3" y="156" width="5" height="52" rx="2.5" fill="#2c2c2e"/>
+  <rect x="-3" y="156" width="2" height="52" rx="1"   fill="rgba(255,255,255,0.08)"/>
+
+  <!-- Volume Down -->
+  <rect x="-3" y="220" width="5" height="52" rx="2.5" fill="#2c2c2e"/>
+  <rect x="-3" y="220" width="2" height="52" rx="1"   fill="rgba(255,255,255,0.08)"/>
+
+  <!-- ── Right side button (power / sleep-wake) ── -->
+  <rect x="278" y="163" width="5" height="72" rx="2.5" fill="#2c2c2e"/>
+  <rect x="281" y="163" width="2" height="72" rx="1"   fill="rgba(255,255,255,0.08)"/>
+</svg>

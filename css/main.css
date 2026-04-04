@@ -575,41 +575,48 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   border-top: none;
 }
 
-/* Mobile frames */
+/* Mobile frames — iPhone mockup */
 .mobile-frames {
   display: flex;
   gap: 2rem;
   align-items: flex-start;
   justify-content: center;
 }
-.screen-frame--mobile {
-  width: 240px;
+
+/* iPhone mockup: SVG frame layered over screenshot */
+.iphone-mockup {
+  position: relative;
+  width: 220px;
   flex-shrink: 0;
-  border-radius: 28px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.12);
-  background: var(--c-dark-3);
-  padding: 12px;
+  /* drop shadow for depth */
+  filter: drop-shadow(0 24px 48px rgba(0,0,0,0.55)) drop-shadow(0 8px 16px rgba(0,0,0,0.35));
 }
-.screen-frame--offset { margin-top: 3rem; }
-.screen-frame--mobile .screen-frame__notch {
-  width: 64px;
-  height: 14px;
-  background: var(--c-dark-2);
-  border-radius: 0 0 10px 10px;
-  margin: 0 auto 10px;
-}
-.screen-frame--mobile .screen-frame__body {
-  aspect-ratio: 9 / 16;
-  overflow: hidden;
-  border-radius: 18px;
-}
-.screen-frame--mobile .screen-frame__body img {
-  width: 100%;
-  height: 100%;
+.iphone-mockup--offset { margin-top: 3rem; }
+
+/* Screenshot sits behind the SVG frame */
+.iphone-mockup__screen {
+  position: absolute;
+  /* Coordinates derived from SVG viewport (280×574):
+     screen rect: x=10 y=50 w=260 h=510
+     as percentages: left=3.57% top=8.71% w=92.86% h=88.85% */
+  top:    8.71%;
+  left:   3.57%;
+  width:  92.86%;
+  height: 88.85%;
   object-fit: cover;
   object-position: top;
-  border-radius: 0;
+  border-radius: 8px;
+  display: block;
+}
+
+/* SVG frame sits on top, pointer-events none so screenshot is still interactive */
+.iphone-mockup__frame {
+  position: relative;
+  width: 100%;
+  display: block;
+  pointer-events: none;
+  z-index: 1;
+  /* SVG defines its own aspect ratio (280×574) so height auto-follows */
 }
 
 /* Feature list */
@@ -970,7 +977,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 }
 
 @media (max-width: 420px) {
-  .screen-frame--mobile { width: 180px; }
+  .iphone-mockup { width: 160px; }
   .before-after { aspect-ratio: 1 / 1; }
 }
 
