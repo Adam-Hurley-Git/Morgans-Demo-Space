@@ -548,6 +548,9 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 .app-view__screen {
   margin-bottom: 2rem;
 }
+.app-view__screen--mobile {
+  padding: 0 2rem;
+}
 .screen-frame--desktop {
   border-radius: var(--radius-lg);
   overflow: hidden;
