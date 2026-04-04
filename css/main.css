@@ -581,9 +581,11 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 /* Mobile frames — iPhone mockup */
 .mobile-frames {
   display: flex;
-  gap: 2.5rem;
+  gap: 1.5rem;
   align-items: flex-start;
   justify-content: center;
+  overflow-x: auto;   /* horizontal scroll on very small screens */
+  padding-bottom: 1rem; /* room for shadows at bottom */
 }
 
 .iphone-mockup {
@@ -593,7 +595,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   --border-radius-inner: calc(var(--border-radius-outer) - var(--outer-padding));
 
   position: relative;
-  width: 240px;
+  width: 220px;
   aspect-ratio: 1 / 2.165; /* iPhone 15 screen ratio */
   flex-shrink: 0;
   box-sizing: border-box;
@@ -603,13 +605,18 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 
   /* Metallic ring + layered depth shadows */
   box-shadow:
-    0 0 0 1.5px rgba(255,255,255,0.78),  /* titanium ring */
-    0 0 0 4px rgba(10,10,10,0.9),         /* dark gap between ring and body */
-    0 28px 56px rgba(0,0,0,0.72),         /* main depth shadow */
-    0 8px 18px rgba(0,0,0,0.50);          /* near shadow */
+    0 0 0 1.5px rgba(255,255,255,0.78),
+    0 0 0 4px rgba(10,10,10,0.9),
+    0 28px 56px rgba(0,0,0,0.72),
+    0 8px 18px rgba(0,0,0,0.50);
 }
 
-.iphone-mockup--offset { margin-top: 3rem; }
+/* Wave offset: phones 2 & 4 sit lower, phones 1 & 3 sit higher */
+.mobile-frames .iphone-mockup:nth-child(even)  { margin-top: 3rem; }
+.mobile-frames .iphone-mockup:nth-child(odd)   { margin-top: 0; }
+
+/* Remove old standalone offset class — handled by nth-child above */
+.iphone-mockup--offset { margin-top: 0; }
 
 /* Dynamic Island pill */
 .iphone-mockup::before {
@@ -992,7 +999,8 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 }
 
 @media (max-width: 420px) {
-  .iphone-mockup { width: 150px; }
+  .iphone-mockup { width: 130px; }
+  .mobile-frames { gap: 1rem; }
   .before-after { aspect-ratio: 1 / 1; }
 }
 
