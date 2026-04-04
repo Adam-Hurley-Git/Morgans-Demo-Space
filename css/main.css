@@ -314,18 +314,24 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 }
 .hero__tower {
   position: absolute;
-  right: clamp(2rem, 8vw, 8rem);
+  right: 0;
   bottom: 0;
   top: 0;
+  width: 45%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
   z-index: 0;
+  padding: calc(var(--nav-h) + 2rem) clamp(2rem, 5vw, 5rem) 3rem;
 }
 .hero__tower img {
-  height: clamp(420px, 75vh, 680px);
+  max-height: 100%;
+  max-width: 100%;
   width: auto;
+  height: auto;
   object-fit: contain;
+  object-position: center bottom;
   opacity: 0.9;
   display: block;
 }
