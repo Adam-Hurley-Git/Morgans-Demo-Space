@@ -221,28 +221,39 @@
           <p class="section-desc">Print, digital, and AI-assisted visuals — each piece designed with Morgans' aesthetic in mind and ready to put to use.</p>
         </div>
 
-        <!-- Before/After Cocktail -->
+        <!-- AI Cocktail Photography Feature -->
         <div class="marketing-feature reveal">
           <div class="marketing-feature__text">
             <span class="section-label">AI Photo Enhancement</span>
             <h3 class="marketing-feature__title">Cocktail Photography</h3>
-            <p>Starting from a standard smartphone photograph, AI-assisted editing was used to produce a rich, atmospheric cocktail image consistent with premium hospitality branding. Drag the slider to compare.</p>
           </div>
-          <div class="before-after" id="beforeAfter">
-            <div class="ba__after">
-              <img src="images/marketing/cocktail/cocktail-after.jpg" alt="After — Enhanced cocktail" draggable="false" />
+
+          <div class="photo-compare">
+            <div class="photo-compare__item">
+              <img src="images/marketing/cocktail/cocktail-before.jpg" alt="Original smartphone photograph" loading="lazy" data-lightbox />
+              <span class="photo-compare__label">Original</span>
             </div>
-            <div class="ba__before" id="baBefore">
-              <img src="images/marketing/cocktail/cocktail-before.jpg" alt="Before — Original photo" draggable="false" />
+            <div class="photo-compare__arrow" aria-hidden="true">
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
+                <path d="M10 22h24M26 14l8 8-8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             </div>
-            <div class="ba__handle" id="baHandle">
-              <div class="ba__line"></div>
-              <button class="ba__btn" aria-label="Drag to compare">
-                <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M7 5L2 11L7 17M15 5L20 11L15 17" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </button>
+            <div class="photo-compare__item">
+              <img src="images/marketing/cocktail/cocktail-after.jpg" alt="AI-enhanced cocktail photograph" loading="lazy" data-lightbox />
+              <span class="photo-compare__label">Enhanced</span>
             </div>
-            <span class="ba__label ba__label--before">Before</span>
-            <span class="ba__label ba__label--after">After</span>
+          </div>
+
+          <div class="photo-context">
+            <div class="pc-block">
+              <span class="pc-block__label pc-block__label--standard">Morgans' Photography</span>
+              <p>Morgans works with a talented photographer to produce high-end, atmospheric imagery for cocktail of the month features and wider marketing use. These professional shots set the visual standard for the brand.</p>
+            </div>
+            <div class="pc-divider"></div>
+            <div class="pc-block">
+              <span class="pc-block__label pc-block__label--tool">The Tool</span>
+              <p>I've built an AI-powered tool that takes any rough smartphone photograph of a cocktail and re-themes it to match Morgans' signature photography style — giving the team access to on-brand imagery whenever a professional shoot isn't possible.</p>
+            </div>
           </div>
         </div>
 
