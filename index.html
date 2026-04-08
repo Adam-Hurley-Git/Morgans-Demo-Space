@@ -74,7 +74,7 @@
           <!-- Wedding -->
           <article class="case-card">
             <a href="https://eventpagedemo.vercel.app/" target="_blank" rel="noopener" class="case-card__media">
-              <img src="images/screenshots/wedding-page/wedding-desktop.png" alt="Wedding Landing Page" loading="lazy" />
+              <img src="images/screenshots/wedding-page/wedding-desktop.png" alt="Wedding Landing Page" loading="lazy" data-lightbox />
               <div class="case-card__media-overlay">View Live Site →</div>
               <span class="case-card__tag">Landing Page</span>
             </a>
@@ -94,7 +94,7 @@
           <!-- Haystack -->
           <article class="case-card">
             <a href="https://haystack-five.vercel.app/" target="_blank" rel="noopener" class="case-card__media">
-              <img src="images/screenshots/haystack/haystack-desktop.png" alt="Haystack Landing Page" loading="lazy" />
+              <img src="images/screenshots/haystack/haystack-desktop.png" alt="Haystack Landing Page" loading="lazy" data-lightbox />
               <div class="case-card__media-overlay">View Live Site →</div>
               <span class="case-card__tag">Landing Page</span>
             </a>
@@ -153,7 +153,7 @@
                 <span></span><span></span><span></span>
               </div>
               <div class="screen-frame__body">
-                <img src="images/screenshots/event-manager/admin/admin-dashboard.png" alt="Admin dashboard view" loading="lazy" />
+                <img src="images/screenshots/event-manager/admin/admin-dashboard.png" alt="Admin dashboard view" loading="lazy" data-lightbox />
               </div>
             </div>
           </div>
@@ -181,16 +181,16 @@
           <div class="app-view__screen app-view__screen--mobile">
             <div class="mobile-frames">
               <div class="iphone-mockup">
-                <img class="iphone-mockup__screen" src="images/screenshots/event-manager/foh/foh-1-header.png" alt="Event overview and contact details" loading="lazy" />
+                <img class="iphone-mockup__screen" src="images/screenshots/event-manager/foh/foh-1-header.png" alt="Event overview and contact details" loading="lazy" data-lightbox />
               </div>
               <div class="iphone-mockup">
-                <img class="iphone-mockup__screen" src="images/screenshots/event-manager/foh/foh-2-layout.png" alt="Room layout and floor plan" loading="lazy" />
+                <img class="iphone-mockup__screen" src="images/screenshots/event-manager/foh/foh-2-layout.png" alt="Room layout and floor plan" loading="lazy" data-lightbox />
               </div>
               <div class="iphone-mockup">
-                <img class="iphone-mockup__screen" src="images/screenshots/event-manager/foh/foh-3-timeline.png" alt="Event timeline" loading="lazy" />
+                <img class="iphone-mockup__screen" src="images/screenshots/event-manager/foh/foh-3-timeline.png" alt="Event timeline" loading="lazy" data-lightbox />
               </div>
               <div class="iphone-mockup">
-                <img class="iphone-mockup__screen" src="images/screenshots/event-manager/foh/foh-4-setup.png" alt="Setup requirements and staff" loading="lazy" />
+                <img class="iphone-mockup__screen" src="images/screenshots/event-manager/foh/foh-4-setup.png" alt="Setup requirements and staff" loading="lazy" data-lightbox />
               </div>
             </div>
           </div>
@@ -252,7 +252,7 @@
           <!-- Review Poster -->
           <div class="m-card m-card--portrait">
             <div class="m-card__img">
-              <img src="images/marketing/review-poster/review-poster.jpg" alt="Review Us Poster" loading="lazy" />
+              <img src="images/marketing/review-poster/review-poster.jpg" alt="Review Us Poster" loading="lazy" data-lightbox />
             </div>
             <div class="m-card__body">
               <span class="m-card__tag">Print &amp; Digital</span>
@@ -264,7 +264,7 @@
           <!-- Easter -->
           <div class="m-card m-card--landscape">
             <div class="m-card__img">
-              <img src="images/marketing/easter/easter-egg-hunt.jpg" alt="Easter Egg Hunt" loading="lazy" />
+              <img src="images/marketing/easter/easter-egg-hunt.jpg" alt="Easter Egg Hunt" loading="lazy" data-lightbox />
             </div>
             <div class="m-card__body">
               <span class="m-card__tag">Event Marketing</span>
@@ -276,7 +276,7 @@
           <!-- Postcard 1 -->
           <div class="m-card m-card--wide">
             <div class="m-card__img">
-              <img src="images/marketing/postcards/postcard-1.jpg" alt="Morgans Postcard 1" loading="lazy" />
+              <img src="images/marketing/postcards/postcard-1.jpg" alt="Morgans Postcard 1" loading="lazy" data-lightbox />
             </div>
             <div class="m-card__body">
               <span class="m-card__tag">Print</span>
@@ -288,7 +288,7 @@
           <!-- Postcard 2 -->
           <div class="m-card m-card--wide">
             <div class="m-card__img">
-              <img src="images/marketing/postcards/postcard-2.jpg" alt="Morgans Postcard 2" loading="lazy" />
+              <img src="images/marketing/postcards/postcard-2.jpg" alt="Morgans Postcard 2" loading="lazy" data-lightbox />
             </div>
             <div class="m-card__body">
               <span class="m-card__tag">Print</span>
@@ -300,7 +300,7 @@
           <!-- Merchandise -->
           <div class="m-card m-card--merch">
             <div class="m-card__img m-card__img--merch" id="merchGrid">
-              <img src="images/marketing/merchandise/merch-tote.jpg" alt="Morgans Branded Tote Bag" loading="lazy" />
+              <img src="images/marketing/merchandise/merch-tote.jpg" alt="Morgans Branded Tote Bag" loading="lazy" data-lightbox />
             </div>
             <div class="m-card__body">
               <span class="m-card__tag">Merchandise</span>
@@ -318,7 +318,7 @@
       <div class="container">
         <div class="about reveal">
           <div class="about__photo">
-            <img src="images/about/profile.jpg" alt="Adam Hurley" />
+            <img src="images/about/profile.jpg" alt="Adam Hurley" data-lightbox />
             <!-- If no photo provided, placeholder div shows -->
           </div>
           <div class="about__content">
@@ -365,6 +365,17 @@
       </div>
     </div>
   </footer>
+
+  <!-- ─── LIGHTBOX ────────────────────────────────────────────────────── -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <div class="lightbox__backdrop" id="lightboxBackdrop"></div>
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close image">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15 5L5 15M5 5l10 10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
+    <div class="lightbox__stage">
+      <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+    </div>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
