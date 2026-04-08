@@ -693,11 +693,11 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 
 /* Before / After slider */
 .marketing-feature {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(2rem, 4vw, 4rem);
-  align-items: center;
   margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+.marketing-feature__text {
+  max-width: 600px;
+  margin-bottom: 2rem;
 }
 .marketing-feature__title {
   font-family: var(--f-heading);
@@ -714,7 +714,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 .before-after {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 7;
   border-radius: var(--radius-lg);
   overflow: hidden;
   cursor: col-resize;
@@ -797,15 +797,17 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 .m-card--landscape { grid-column: span 8; }
 .m-card--wide      { grid-column: span 12; }
 .m-card--merch     { grid-column: span 12; }
+.m-card--half      { grid-column: span 6; }
 
 .m-card__img {
   flex-shrink: 0;
   background: var(--c-cream-2);
   overflow: hidden;
 }
-.m-card--portrait .m-card__img { aspect-ratio: 3/4; }
+.m-card--portrait .m-card__img  { aspect-ratio: 3/4; }
 .m-card--landscape .m-card__img { aspect-ratio: 3/2; }
-.m-card:not(.m-card--portrait):not(.m-card--wide):not(.m-card--merch):not(.m-card--landscape) .m-card__img { aspect-ratio: 4/3; }
+.m-card--half .m-card__img      { aspect-ratio: 3/2; }
+.m-card:not(.m-card--portrait):not(.m-card--wide):not(.m-card--merch):not(.m-card--landscape):not(.m-card--half) .m-card__img { aspect-ratio: 4/3; }
 
 .m-card__img img {
   width: 100%;
@@ -981,10 +983,9 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   .cards-two          { grid-template-columns: 1fr; }
   .about              { grid-template-columns: 1fr; }
   .about__photo       { position: static; aspect-ratio: 4/3; max-height: 400px; }
-  .marketing-feature  { grid-template-columns: 1fr; }
   .problem-solution   { grid-template-columns: 1fr; }
   .ps-divider         { width: 100%; height: 1px; align-self: auto; }
-  .m-card--portrait, .m-card, .m-card--wide, .m-card--merch { grid-column: span 12; }
+  .m-card--portrait, .m-card, .m-card--wide, .m-card--half, .m-card--merch { grid-column: span 12; }
   .demo-cta           { flex-direction: column; text-align: center; }
   .mobile-frames      { justify-content: center; }
 }
@@ -1001,7 +1002,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 @media (max-width: 420px) {
   .iphone-mockup { width: 130px; }
   .mobile-frames { gap: 1rem; }
-  .before-after { aspect-ratio: 1 / 1; }
+  .before-after { aspect-ratio: 4 / 3; }
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
